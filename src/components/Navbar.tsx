@@ -31,20 +31,36 @@ const Navbar: React.FC<NavbarProps> = ({ theme }) => {
           onClick={() => setSidebarOpen(false)}
         />
 
-        <a href='#' className='sm:hover:border-b'>
+        <a
+          onClick={() => setSidebarOpen(false)}
+          href='#'
+          className='sm:hover:border-b'
+        >
           Home
         </a>
-        <a href='#services' className='sm:hover:border-b'>
+        <a
+          onClick={() => setSidebarOpen(false)}
+          href='#services'
+          className='sm:hover:border-b'
+        >
           Services
         </a>
-        <a href='#our-work' className='sm:hover:border-b'>
+        <a
+          onClick={() => setSidebarOpen(false)}
+          href='#our-work'
+          className='sm:hover:border-b'
+        >
           Our Work
         </a>
-        <a href='#contact-us' className='sm:hover:border-b'>
+        <a
+          onClick={() => setSidebarOpen(false)}
+          href='#contact-us'
+          className='sm:hover:border-b'
+        >
           Contact Us
         </a>
       </div>
-      <div>
+      <div className='flex items-center gap-2 sm:gap-4'>
         <img
           src={theme === 'dark' ? assets.menu_icon_dark : assets.menu_icon}
           alt=''
