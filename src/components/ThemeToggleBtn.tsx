@@ -12,7 +12,7 @@ const ThemeToggleBtn: React.FC<NavbarProps> = ({ theme, setTheme }) => {
       '(prefers-color-scheme: dark)'
     ).matches;
     setTheme(theme || (prefersDarkMode ? 'dark' : 'light'));
-  }, []);
+  }, [setTheme, theme]);
 
   useEffect(() => {
     if (theme === 'dark') {
