@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import assets from '../assets/assets';
 import Title from './Title';
 import toast from 'react-hot-toast';
