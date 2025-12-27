@@ -31,14 +31,14 @@ const ThemeToggleBtn: React.FC<NavbarProps> = ({ theme, setTheme }) => {
             onClick={() => setTheme('light')}
             src={assets.sun_icon}
             alt='sun_icon'
-            className='size-8.5 p-1.5 border border-gray-500 rounded-full'
+            className='size-8.5 p-1.5 border border-gray-500 rounded-full cursor-pointer'
           />
         ) : (
           <img
             onClick={() => setTheme('dark')}
             src={assets.moon_icon}
             alt='moon_icon'
-            className='size-8.5 p-1.5 border border-gray-500 rounded-full'
+            className='size-8.5 p-1.5 border border-gray-500 rounded-full cursor-pointer'
           />
         )}
       </button>
