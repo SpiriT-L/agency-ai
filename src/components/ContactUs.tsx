@@ -1,6 +1,7 @@
 import assets from '../assets/assets';
 import Title from './Title';
 import toast from 'react-hot-toast';
+import { motion } from 'motion/react';
 
 const ContactUs = () => {
   interface FormSubmitResponse {
@@ -35,7 +36,10 @@ const ContactUs = () => {
   };
 
   return (
-    <div
+    <motion.div
+      initial='hidden'
+      whileInView='visible'
+      viewport={{ once: true }}
       id='contact-us'
       className='flex flex-col items-center gap-7 px-4 sm:px-12 lg:px-24 xl:px-40 pt-30 text-gray-700 dark:text-white'
     >
@@ -43,7 +47,11 @@ const ContactUs = () => {
         title='Reach out to us'
         desc='Ready to grow your brand? Let’s connect and build something exceptional together.'
       />
-      <form
+      <motion.form
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.4 }}
         onSubmit={onSubmit}
         className='grid sm:grid-cols-2 gap-3 sm:gap-5 max-w-2xl w-full'
       >
@@ -90,8 +98,8 @@ const ContactUs = () => {
           Send Message{' '}
           <img src={assets.arrow_icon} alt='arrow icon' className='w-4' />
         </button>
-      </form>
-    </div>
+      </motion.form>
+    </motion.div>
   );
 };
 
