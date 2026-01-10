@@ -3,7 +3,10 @@ import { motion } from 'motion/react';
 
 const Hero = () => {
   return (
-    <div
+    <motion.div
+    initial='hidden'
+    whileInView='visible'
+    viewport={{ once: true }}
       id='hero'
       className='flex flex-col items-center gap-6 py-20 px-4 sm:px-12 lg:px-24 lx:px-40 text-center w-full overflow-hidden text-gray-700 dark:text-white'
     >
@@ -59,7 +62,7 @@ const Hero = () => {
           className='absolute -top-40 -right-40 sm:-top-100 sm:-right-70 -z-1 dark:hidden'
         />
       </motion.div>
-    </div>
+    </motion.div>
   );
 };
 
