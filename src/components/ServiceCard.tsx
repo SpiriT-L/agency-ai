@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+import { motion } from 'motion/react';
 
 interface ServiceCardProps {
   service: {
@@ -9,7 +10,7 @@ interface ServiceCardProps {
   index: number;
 }
 
-const ServiceCard = ({ service }: ServiceCardProps) => {
+const ServiceCard = ({ service, index }: ServiceCardProps) => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [visible, setVisible] = useState(false);
 
@@ -26,7 +27,11 @@ const ServiceCard = ({ service }: ServiceCardProps) => {
   };
 
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: index * 0.2 }}
+      viewport={{ once: true }}
       className='relative overflow-hidden max-w-lg m-2 sm:m-4 rounded-xl border border-gray-200 dark:border-gray-700 shadow-gray-100'
       onMouseEnter={() => setVisible(true)}
       onMouseLeave={() => setVisible(false)}
@@ -52,7 +57,7 @@ const ServiceCard = ({ service }: ServiceCardProps) => {
           <p className='text-sm mt-2'>{service.description}</p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
