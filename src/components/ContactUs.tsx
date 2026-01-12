@@ -26,7 +26,7 @@ const ContactUs = () => {
 
       if (data.success) {
         toast.success('Thank you for your submission!');
-        event.target.reset();
+        (event.target as HTMLFormElement).reset();
       } else {
         toast.error(data.message || 'An error occurred');
       }
