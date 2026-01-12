@@ -35,7 +35,7 @@ const Services = () => {
     <motion.div
       initial='hidden'
       animate='visible'
-      transition={{ staggerChildren: 0.2 }}
+      transition={{ staggerChildren: 0.5 }}
       viewport={{ once: true }}
       id='services'
       className='relative flex flex-col items-center gap-7 px-4 sm:px-12 lg:px-24 xl:px-40 pt-30 text-gray-700 dark:text-white'
