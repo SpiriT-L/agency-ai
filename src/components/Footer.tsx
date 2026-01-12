@@ -19,8 +19,8 @@ const Footer: React.FC<FooterProps> = ({ theme }) => {
         {/* footer top */}
         <div className='flex justify-between lg:items-center max-lg:flex-col gap-10'>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
             className='space-y-5 text-sm text-gray-700 dark:text-gray-400'
@@ -59,8 +59,8 @@ const Footer: React.FC<FooterProps> = ({ theme }) => {
             </ul>
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
             className='text-gray-600 dark:text-gray-400'
@@ -89,7 +89,7 @@ const Footer: React.FC<FooterProps> = ({ theme }) => {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
+          transition={{ duration: 0.5}}
           viewport={{ once: true }}
           className='pb-6 text-sm text-gray-500 flex justify-center sm:justify-between gap-4 flex-wrap'
         >
