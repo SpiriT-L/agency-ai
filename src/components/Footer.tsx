@@ -97,25 +97,25 @@ const Footer: React.FC<FooterProps> = ({ theme }) => {
           <div className='flex items-center justify-between gap-8'>
             <a
               className='transition duration-200 hover:scale-[1.01] hover:-translate-y-px'
-              href='/facebook.com'
+              href='https://facebook.com'
             >
               <img src={assets.facebook_icon} alt='facebook icon' />
             </a>
             <a
               className='transition duration-200 hover:scale-[1.01] hover:-translate-y-px'
-              href='/x.com'
+              href='https://x.com/leonid_js/'
             >
               <img src={assets.twitter_icon} alt='x icon' />
             </a>
             <a
               className='transition duration-200 hover:scale-[1.01] hover:-translate-y-px'
-              href='/instagram.com'
+              href='https://www.instagram.com/m.leon.id/'
             >
               <img src={assets.instagram_icon} alt='instagram icon' />
             </a>
             <a
               className='transition duration-200 hover:scale-[1.01] hover:-translate-y-px'
-              href=''
+              href='https://www.linkedin.com/in/m-leonid/'
             >
               <img src={assets.linkedin_icon} alt='linkedin icon' />
             </a>
